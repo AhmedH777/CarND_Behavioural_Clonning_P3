@@ -10,7 +10,7 @@
 [image6]: ./examples/recover_5.jpg "Recovery Image"
 [image7]: ./examples/my_model.jpg "My Model"
 [image8]: ./examples/Dist_bef.jpg "Dist Before"
-[image9]: ./examples/Dist_aft.jpg "Dist After"
+[image9]: ./examples/Dist_Aft.jpg "Dist After"
 
 ## Overview
 
