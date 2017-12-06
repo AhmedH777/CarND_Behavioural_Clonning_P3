@@ -1,4 +1,4 @@
-#**Behavioral Cloning**
+# **Behavioral Cloning**
 ---
 [//]: # (Image References)
 
@@ -12,11 +12,11 @@
 [image8]: ./examples/Dist_bef.png "Dist Before"
 [image9]: ./examples/Dist_aft.png "Dist After"
 
-##Overview
+## Overview
 
 The project main idea is to use deep neural networks and constitutional neural networks to clone driving behavior.
 
-##Project Goals
+## Project Goals
 The goals / steps of this project are the following:
 
 * Use the simulator to collect data of good driving behavior
@@ -27,13 +27,13 @@ The goals / steps of this project are the following:
 
 
 ## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
+### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Files Submitted & Code Quality
+### Files Submitted & Code Quality
 
 
-####1. Submission includes all required files and can be used to run the simulator in autonomous mode
+#### 1. Submission includes all required files and can be used to run the simulator in autonomous mode
 
 My project includes the following files:
 
@@ -42,20 +42,20 @@ My project includes the following files:
 * **model.h5** containing a trained convolution neural network 
 * **README.md** summarizing the results
 
-####2. Submission includes functional code
+#### 2. Submission includes functional code
 Using the Udacity provided simulator and my **drive.py** file, the car can be driven autonomously around the track by executing
 
 ```sh
 python drive.py model.h5
 ```
 
-####3. Submission code is usable and readable
+#### 3. Submission code is usable and readable
 
 The **model.py** file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. An appropriate model architecture has been employed
+#### 1. An appropriate model architecture has been employed
 
 My model is a modified version of [Nvidia model](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) used for end to end deep learning. The model is defined in (**model.py** lines 181-203)
 
@@ -63,7 +63,7 @@ This is the original model of Nvidia
 
 ![alt text][image1]
 
-####2. Attempts to reduce overfitting in the model
+#### 2. Attempts to reduce overfitting in the model
 
 In order to reduce over fitting two approaches where applied:
 
@@ -81,7 +81,7 @@ In order to reduce over fitting two approaches where applied:
 
 ![alt text][image2]
 
-####3. Model parameter tuning
+#### 3. Model parameter tuning
 
 (**model.py** line 206-207)
 
@@ -89,7 +89,7 @@ In order to reduce over fitting two approaches where applied:
 * Epochs : 10 epochs
 * Optimizer : Adam Optimizer (so the learning rate was not tuned manually)
 
-####4. Appropriate training data
+#### 4. Appropriate training data
 
 Training data was chosen to keep the vehicle driving on the road. I used a combination of:
 
@@ -111,7 +111,7 @@ Track 2
 
 For details about how I created the training data, see the next section.
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
 The overall strategy for deriving a model architecture was to make the vehicle able to drive around the track in autonomous mode without leaving the track.
 
@@ -152,7 +152,7 @@ Finally,
 At the end of the process, the vehicle is able to drive autonomously around both tracks without leaving the road.
 
 
-####2. Final Model Architecture
+#### 2. Final Model Architecture
 
 The final model architecture (**model.py** lines 180-203)
 
@@ -161,9 +161,9 @@ Architecture visualization (inspired by the architecture used by jeremy shannon)
 ![alt text][image7]
 
 
-####3. Creation of the Training Set & Training Process
+#### 3. Creation of the Training Set & Training Process
 
-#####3.1 Data Collection
+##### 3.1 Data Collection
 
 I collected data from both tracks 1 and 2 to make the data more diverse and the network in turn would be more generic.
 
@@ -185,12 +185,12 @@ Track 2
 * One lap clock-wise
 * Blurred Images(Brighter and Darker)
 
-#####3.2 Data Augmentation
+##### 3.2 Data Augmentation
 
 * Adding both left and right cameras input with steering adjustment factor of (+/-) ***0.2*** 
 * Adding bright and dark blurred augmentation for all the images (including adjusted left and right images)
 
-#####3.3 Data PreProcessing
+##### 3.3 Data PreProcessing
 
 I decided to change in the images to be like the ones used by Nvidia in their model to be able to use the model perfectly so I had to do the following :
 
@@ -201,7 +201,7 @@ I decided to change in the images to be like the ones used by Nvidia in their mo
 
 The last three operations have been done in **model.py** and in **drive.py** although in **drive.py** the second operation was to convert from RGB to YUV
 
-#####3.4 Data Analysis and Adjustment
+##### 3.4 Data Analysis and Adjustment
 
 After Analyzing the data which would be fed to the network i have found that alot of data is given for driving in a straight line also alot of data acquired from left and right camera causing bias in the data for both ***0.0*** and ***(+/-) 0.2*** steering angles.
 
