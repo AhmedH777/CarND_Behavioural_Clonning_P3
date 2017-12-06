@@ -2,15 +2,15 @@
 ---
 [//]: # (Image References)
 
-[image1]: ./examples/nvidia_model.png "Nvidia Model"
-[image2]: ./examples/MSE.png "MSE"
+[image1]: ./examples/nvidia_model.jpg "Nvidia Model"
+[image2]: ./examples/MSE.jpg "MSE"
 [image3]: ./examples/recover_2.jpg "Recovery Image"
 [image4]: ./examples/recover_3.jpg "Recovery Image"
 [image5]: ./examples/recover_4.jpg "Recovery Image"
 [image6]: ./examples/recover_5.jpg "Recovery Image"
 [image7]: ./examples/my_model.jpg "My Model"
-[image8]: ./examples/Dist_bef.png "Dist Before"
-[image9]: ./examples/Dist_aft.png "Dist After"
+[image8]: ./examples/Dist_bef.jpg "Dist Before"
+[image9]: ./examples/Dist_aft.jpg "Dist After"
 
 ## Overview
 
