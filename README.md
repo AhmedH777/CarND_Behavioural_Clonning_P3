@@ -213,4 +213,4 @@ The Solution was to trim the data to end with a normally distributed data for al
 
 #### Upcoming Improvements
 
-I used FloydHub GPU and I saved the preprocessed data online therefore i didnt use generators but i intend to enhance this project furthermore"# CarND_Behavioural_Clonning_P3" 
+I used FloydHub GPU and I saved the preprocessed data online therefore i didnt use generators but i intend to enhance this project furthermore
