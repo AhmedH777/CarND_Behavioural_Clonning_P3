@@ -190,18 +190,7 @@ Track 2
 * Adding both left and right cameras input with steering adjustment factor of (+/-) ***0.2*** 
 * Adding bright and dark blurred augmentation for all the images (including adjusted left and right images)
 
-##### 3.3 Data PreProcessing
-
-I decided to change in the images to be like the ones used by Nvidia in their model to be able to use the model perfectly so I had to do the following :
-
-* Cropping images 50 pixels from the top and 20 pixels from the bottom) so the image size converted from 160x320x3 to 90x320x3
-
-* Convert images from BGR to YUV as cv2.imread() reads the images in BGR
-* Re-size the image from 90x320x3 to 66x200x3
-
-The last three operations have been done in **model.py** and in **drive.py** although in **drive.py** the second operation was to convert from RGB to YUV
-
-##### 3.4 Data Analysis and Adjustment
+##### 3.3 Data Analysis and Adjustment
 
 After Analyzing the data which would be fed to the network i have found that alot of data is given for driving in a straight line also alot of data acquired from left and right camera causing bias in the data for both ***0.0*** and ***(+/-) 0.2*** steering angles.
 
